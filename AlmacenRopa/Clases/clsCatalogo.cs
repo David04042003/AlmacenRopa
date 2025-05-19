@@ -30,7 +30,7 @@ namespace AlmacenRopa.Clases
         {
             try
             {
-                PRODUCTO prod = ConsultarPorId(producto.ID_PRODUCTO); 
+                PRODUCTO prod = ConsultarPorId(producto.ID_PRODUCTO); // Cambiado de ProductoId a ID_PRODUCTO
                 if (prod == null)
                 {
                     return "Producto no existe";
@@ -46,14 +46,14 @@ namespace AlmacenRopa.Clases
             }
         }
 
-        private bool Validar(int ID_PRODUCTO)
+        private bool Validar(int productoId)
         {
-            return ConsultarPorId(ID_PRODUCTO) != null;
+            return ConsultarPorId(productoId) != null;
         }
 
         public PRODUCTO ConsultarPorId(int productoId)
         {
-            PRODUCTO prod = dbAlmacen.PRODUCTOes.FirstOrDefault(p => p.ID_PRODUCTO == productoId); 
+            PRODUCTO prod = dbAlmacen.PRODUCTOes.FirstOrDefault(p => p.ID_PRODUCTO == productoId); // Cambiado de ProductoId a ID_PRODUCTO
             return prod;
         }
 
@@ -61,7 +61,7 @@ namespace AlmacenRopa.Clases
         {
             try
             {
-                PRODUCTO prod = ConsultarPorId(producto.ID_PRODUCTO); 
+                PRODUCTO prod = ConsultarPorId(producto.ID_PRODUCTO); // Cambiado de ProductoId a ID_PRODUCTO
                 if (prod == null)
                 {
                     return "Producto no existe";
@@ -77,11 +77,11 @@ namespace AlmacenRopa.Clases
             }
         }
 
-        public string EliminarPorId(int ID_PRODUCTO)
+        public string EliminarPorId(int productoId)
         {
             try
             {
-                PRODUCTO prod = ConsultarPorId(ID_PRODUCTO);
+                PRODUCTO prod = ConsultarPorId(productoId);
                 if (prod == null)
                 {
                     return "Producto no existe";
@@ -100,15 +100,15 @@ namespace AlmacenRopa.Clases
         public List<PRODUCTO> ConsultarTodos()
         {
             return dbAlmacen.PRODUCTOes
-                .OrderBy(p => p.NOMBRE) 
+                .OrderBy(p => p.NOMBRE) // Cambiado de Nombre a NOMBRE
                 .ToList();
         }
 
         public List<PRODUCTO> ObtenerProductosPorCategoria(int categoriaId)
         {
             return dbAlmacen.PRODUCTOes
-                .Where(p => p.ID_CATEGORIA == categoriaId) 
-                .OrderBy(p => p.NOMBRE) 
+                .Where(p => p.ID_CATEGORIA == categoriaId) // Cambiado de CategoriaId a ID_CATEGORIA
+                .OrderBy(p => p.NOMBRE) // Cambiado de Nombre a NOMBRE
                 .ToList();
         }
 
@@ -118,37 +118,37 @@ namespace AlmacenRopa.Clases
 
             if (!string.IsNullOrEmpty(talla))
             {
-                // Necesitamos un join con PRODUCTO_VARIANTE y TALLA
+                // Necesitarías un join con PRODUCTO_VARIANTE y TALLA
                 query = query.Where(p => p.PRODUCTO_VARIANTE.Any(pv => pv.TALLA.DESCRIPCION == talla));
             }
 
             if (!string.IsNullOrEmpty(color))
             {
-                // Necesitamos un join con PRODUCTO_VARIANTE y COLOR
+                // Necesitarías un join con PRODUCTO_VARIANTE y COLOR
                 query = query.Where(p => p.PRODUCTO_VARIANTE.Any(pv => pv.COLOR.NOMBRE_COLOR == color));
             }
 
             if (precioMin.HasValue)
             {
-                query = query.Where(p => p.PRECIO_BASE >= precioMin.Value); 
+                query = query.Where(p => p.PRECIO_BASE >= precioMin.Value); // Cambiado de Precio a PRECIO_BASE
             }
 
             if (precioMax.HasValue)
             {
-                query = query.Where(p => p.PRECIO_BASE <= precioMax.Value); 
+                query = query.Where(p => p.PRECIO_BASE <= precioMax.Value); // Cambiado de Precio a PRECIO_BASE
             }
 
             if (!string.IsNullOrEmpty(nombre))
             {
-                query = query.Where(p => p.NOMBRE.Contains(nombre)); 
+                query = query.Where(p => p.NOMBRE.Contains(nombre)); // Cambiado de Nombre a NOMBRE
             }
 
-            return query.OrderBy(p => p.NOMBRE).ToList(); 
+            return query.OrderBy(p => p.NOMBRE).ToList(); // Cambiado de Nombre a NOMBRE
         }
 
-        public List<PRODUCTO> ObtenerProductosRelacionados(int ID_PRODUCTO)
+        public List<PRODUCTO> ObtenerProductosRelacionados(int productoId)
         {
-            var productoActual = ConsultarPorId(ID_PRODUCTO);
+            var productoActual = ConsultarPorId(productoId);
 
             if (productoActual == null)
             {
@@ -156,7 +156,7 @@ namespace AlmacenRopa.Clases
             }
 
             var productosRelacionados = dbAlmacen.PRODUCTOes
-                .Where(p => p.ID_CATEGORIA == productoActual.ID_CATEGORIA && p.ID_PRODUCTO != ID_PRODUCTO) 
+                .Where(p => p.ID_CATEGORIA == productoActual.ID_CATEGORIA && p.ID_PRODUCTO != productoId) // Cambiado de CategoriaId a ID_CATEGORIA y ProductoId a ID_PRODUCTO
                 .OrderBy(p => Guid.NewGuid())
                 .Take(5)
                 .ToList();
@@ -167,14 +167,14 @@ namespace AlmacenRopa.Clases
         public List<CATEGORIA> ObtenerCategorias()
         {
             return dbAlmacen.CATEGORIAs
-                .OrderBy(c => c.NOMBRE) 
+                .OrderBy(c => c.NOMBRE) // Cambiado de Nombre a NOMBRE
                 .ToList();
         }
 
         public List<string> ObtenerColoresDisponibles()
         {
             return dbAlmacen.COLORs
-                .Select(c => c.NOMBRE_COLOR) 
+                .Select(c => c.NOMBRE_COLOR) // Obteniendo de la tabla COLOR
                 .Distinct()
                 .OrderBy(c => c)
                 .ToList();
@@ -183,7 +183,7 @@ namespace AlmacenRopa.Clases
         public List<string> ObtenerTallasDisponibles()
         {
             return dbAlmacen.TALLAs
-                .Select(t => t.DESCRIPCION) 
+                .Select(t => t.DESCRIPCION) // Obteniendo de la tabla TALLA
                 .Distinct()
                 .OrderBy(t => t)
                 .ToList();

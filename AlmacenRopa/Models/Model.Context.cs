@@ -18,6 +18,7 @@ namespace AlmacenRopa.Models
         public ALMACEN_ROPAEntities()
             : base("name=ALMACEN_ROPAEntities")
         {
+            this.Configuration.ProxyCreationEnabled = false; //  Esto evita que EF genere tipos dinámicos
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
