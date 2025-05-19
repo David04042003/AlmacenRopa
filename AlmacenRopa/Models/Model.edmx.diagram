@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c1d5a85233c3423db9c2c53dec8fef47" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.AUDITORIASTOCK" Width="1.5" PointX="5.25" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.CANAL_VENTA" Width="1.5" PointX="3" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.CATEGORIA" Width="1.5" PointX="1.5" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.CIUDAD" Width="1.5" PointX="3" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.CLIENTE" Width="1.5" PointX="3" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.COLOR" Width="1.5" PointX="1.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.DETALLEDEVOLUCION" Width="1.5" PointX="9.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.DETALLEPEDIDO" Width="1.5" PointX="11.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.DETALLEVENTA" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.DEVOLUCION" Width="1.5" PointX="7.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.DIRECCIONESCLIENTE" Width="1.5" PointX="5.25" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.EMPLEADO" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.HISTORIAL" Width="1.5" PointX="3.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.METODOSPAGO" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.PAGO" Width="1.5" PointX="10.5" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.PEDIDO" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.PRODUCTO" Width="1.5" PointX="1.5" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.PRODUCTO_PROVEEDOR" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.PRODUCTO_VARIANTE" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.PROVEEDOR" Width="1.5" PointX="3.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.RECEPCIONPEDIDO" Width="1.5" PointX="8.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.SEDE" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.STOCK" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.TALLA" Width="1.5" PointX="1.5" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.TIPO_CLIENTE" Width="1.5" PointX="0.75" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.TIPO_DIRECCION" Width="1.5" PointX="3" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.USUARIO" Width="1.5" PointX="5.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="ALMACEN_ROPAModel.VENTA" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_AUDITORIA_EMPLEADO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_AUDITORIA_STOCK" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_VENTA_CANAL" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_PRODUCTO_CATEGORIA" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_DIRECCION_CIUDAD" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_CLIENTE_TIPO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_DIRECCIOCLIENTE_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_VENTAS_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_VARIANTE_COLOR" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_DETALLE_DEVOLUCION_DETALLE" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_DETALLE_DEVOLUCION_DEVOLUCION" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_DETALLE_PEDIDO_PEDIDO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_DETALLE_PEDIDO_PRODUCTO_VARIANTE" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_DETALLE_STOCK" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_DETALLE_VENTA" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_DEVOLUCION_VENTA" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_DIRECCION_TIPO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_EMPLEADOS_SEDES" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_RECEPCION_EMPLEADO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_USUARIO_EMPLEADO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_VENTAS_EMPLEADO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_HISTORIAL_PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_PAGO_METODO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_PAGO_VENTA" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_PEDIDO_PROVEEDOR" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_RECEPCION_PEDIDO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_PRODUCTO_PROVEEDOR_PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_VARIANTE_PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_PRODUCTO_PROVEEDOR_PROVEEDOR" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_STOCK_PRODUCTO_VARIANTE" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_VARIANTE_TALLA" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_RECEPCION_SEDE" ManuallyRouted="false" />
+        <AssociationConnector Association="ALMACEN_ROPAModel.FK_STOCK_SEDE" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
