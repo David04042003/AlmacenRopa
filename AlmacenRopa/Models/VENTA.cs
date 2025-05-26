@@ -11,7 +11,8 @@ namespace AlmacenRopa.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using Newtonsoft.Json;
+
     public partial class VENTA
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -27,15 +28,21 @@ namespace AlmacenRopa.Models
         public int CANAL { get; set; }
         public Nullable<int> ID_CLIENTE { get; set; }
         public Nullable<int> ID_EMPLEADO { get; set; }
-    
+
+        [JsonIgnore]
         public virtual CANAL_VENTA CANAL_VENTA { get; set; }
+        [JsonIgnore]
         public virtual CLIENTE CLIENTE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<DETALLEVENTA> DETALLEVENTAs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<DEVOLUCION> DEVOLUCIONs { get; set; }
+        [JsonIgnore]
         public virtual EMPLEADO EMPLEADO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<PAGO> PAGOes { get; set; }
     }
 }
