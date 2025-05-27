@@ -218,10 +218,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Clases\clsCatalogo.cs" />
+    <Compile Include="Clases\clsCliente.cs" />
     <Compile Include="Clases\clsInventario.cs" />
     <Compile Include="Clases\clsVentas.cs" />
     <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Controllers\CatalogoController .cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventarioController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -267,6 +269,7 @@
     <Compile Include="Models\HISTORIAL.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\libLogin.cs" />
     <Compile Include="Models\METODOSPAGO.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
