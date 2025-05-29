@@ -10,6 +10,7 @@ using System.Web.Http;
 namespace AlmacenRopa.Controllers
 {
     [RoutePrefix("api/Catalogo")]
+    [Authorize] // Requiere autenticación con token
     public class CatalogoController : ApiController
     {
        
