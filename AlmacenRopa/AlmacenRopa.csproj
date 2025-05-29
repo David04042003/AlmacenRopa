@@ -216,6 +216,8 @@
     <Compile Include="Clases\clsCatalogo.cs" />
     <Compile Include="Clases\clsCliente.cs" />
     <Compile Include="Clases\clsInventario.cs" />
+    <Compile Include="Clases\clsVentas.cs" />
+    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Clases\clsLogin.cs" />
     <Compile Include="Clases\clsReporte.cs" />
     <Compile Include="Clases\clsGestionProdcuto.cs" />
