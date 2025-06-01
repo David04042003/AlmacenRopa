@@ -217,7 +217,9 @@
     <Compile Include="Clases\clsCliente.cs" />
     <Compile Include="Clases\clsInventario.cs" />
     <Compile Include="Clases\clsDevoluciones.cs" />
+    <Compile Include="Clases\clsProveedor.cs" />
     <Compile Include="Clases\clsVentas.cs" />
+    <Compile Include="Controllers\ProveedorController.cs" />
     <Compile Include="Controllers\DevolucionController.cs" />
     <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Clases\clsLogin.cs" />
