@@ -215,10 +215,12 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Clases\clsCatalogo.cs" />
     <Compile Include="Clases\clsCliente.cs" />
+    <Compile Include="Clases\clsDashboard.cs" />
     <Compile Include="Clases\clsInventario.cs" />
     <Compile Include="Clases\clsDevoluciones.cs" />
     <Compile Include="Clases\clsProveedor.cs" />
     <Compile Include="Clases\clsVentas.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\ProveedorController.cs" />
     <Compile Include="Controllers\DevolucionController.cs" />
     <Compile Include="Controllers\VentasController.cs" />
