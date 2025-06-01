@@ -9,6 +9,7 @@ using System.Web.Http;
 namespace AlmacenRopa.Controllers
 {
     [RoutePrefix("api/Inventario")]
+    [Authorize] // Requiere autenticación con token
     public class InventarioController : ApiController
     {
         // 1. Consultar stock por sede y/o producto
